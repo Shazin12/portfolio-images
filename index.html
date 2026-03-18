@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Specialist | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .play-store { background-color: #334155; color: #f8fafc; }
+        .app-store { background-color: #334155; color: #f8fafc; }
+        
+        .play-store:hover { background-color: #10b981; }
+        .app-store:hover { background-color: #0ea5e9; }
+
+        /* Custom scrollbar hiding for image gallery */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        section { padding: 80px 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold gradient-text">FLUTTER.DEV</div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+                <a href="#home" class="hover:text-sky-400 transition">Home</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+                <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center pt-20">
+        <div class="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-sky-400 bg-sky-400/10 rounded-full border border-sky-400/20">
+            Available for New Projects
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+            Building Seamless <br> <span class="gradient-text">Cross-Platform Apps</span>
+        </h1>
+        <p class="max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
+            I am a specialized **Flutter & Dart Developer** dedicated to building production-grade mobile applications. 
+            Proven track record of publishing high-performance apps to both iOS and Android stores.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#projects" class="px-8 py-3 bg-sky-500 hover:bg-sky-600 rounded-full font-bold transition shadow-lg shadow-sky-500/20">
+                View My Work
+            </a>
+            <a href="#contact" class="px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full font-bold transition">
+                Let's Talk
+            </a>
+        </div>
+    </section>
+
+    <section id="projects" class="max-w-6xl mx-auto">
+        <div class="mb-16 text-center">
+            <h2 class="text-3xl font-bold mb-4">Production Apps</h2>
+            <p class="text-slate-400">Real-world applications currently live on the stores.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="glass-card p-8 rounded-2xl flex flex-col h-full border-sky-500/30">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-sky-500/20 rounded-lg">
+                        <i data-lucide="heart" class="text-sky-500"></i>
+                    </div>
+                    <span class="text-xs font-mono text-sky-400">Social & Community</span>
+                </div>
+                
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold mb-3">Benaa Digital Social Center (مركز بنية الرقمي)</h3>
+                    <p class="text-slate-400 mb-5">
+                        A digital platform for social services and community engagement with accessible UI and secure communication channels.
+                    </p>
+                    
+                    <!-- Scrollable App Screenshots -->
+                    <div class="flex overflow-x-auto gap-3 mb-6 pb-2 snap-x hide-scrollbar">
+                        <img src="disc (1).jpeg" alt="DISC Events" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="disc (2).jpeg" alt="DISC Group Visits" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="disc (3).jpeg" alt="DISC My Events" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="disc (4).jpeg" alt="DISC Settings" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="disc (5).jpeg" alt="DISC Event Details" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="disc (6).jpeg" alt="DISC Ticket QR" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <a href="https://play.google.com/store/apps/details?id=com.benaa.digitalsocialcenter" target="_blank" class="store-btn play-store">
+                        <i data-lucide="play"></i> Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/id6746695921" target="_blank" class="store-btn app-store">
+                        <i data-lucide="apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-orange-500/20 rounded-lg">
+                        <i data-lucide="package" class="text-orange-500"></i>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Odoo Integration</span>
+                </div>
+                
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold mb-3">Makhzny (مخزني)</h3>
+                    <p class="text-slate-400 mb-5">
+                        Advanced warehouse management integrated with Odoo ERP, featuring real-time syncing.
+                    </p>
+                    
+                    <!-- Scrollable App Screenshots -->
+                    <div class="flex overflow-x-auto gap-3 mb-6 pb-2 snap-x hide-scrollbar">
+                        <img src="WhatsApp Image 2026-03-18 at 6.55.52 PM.jpeg" alt="Makhzny Home" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="WhatsApp Image 2026-03-18 at 6.55.52 PM (1).jpeg" alt="Makhzny Moving" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="WhatsApp Image 2026-03-18 at 6.55.53 PM.jpeg" alt="Makhzny Store" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="WhatsApp Image 2026-03-18 at 6.55.53 PM (2).jpeg" alt="Makhzny Storage Details" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="WhatsApp Image 2026-03-18 at 6.55.53 PM (3).jpeg" alt="Makhzny Checkout" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="WhatsApp Image 2026-03-18 at 6.55.54 PM.jpeg" alt="Makhzny Terms" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <a href="https://play.google.com/store/apps/details?id=com.makhzny.odoo" target="_blank" class="store-btn play-store">
+                        <i data-lucide="play"></i> Google Play
+                    </a>
+                    <a href="https://apps.apple.com/us/app/%D9%85%D8%AE%D8%B2%D9%86%D9%8A-makhzny/id6532618677" target="_blank" class="store-btn app-store">
+                        <i data-lucide="apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-emerald-500/20 rounded-lg">
+                        <i data-lucide="users" class="text-emerald-500"></i>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Community & Finance</span>
+                </div>
+                
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold mb-3">Msahmon (مساهمون)</h3>
+                    <p class="text-slate-400 mb-5">
+                        Collaborative platform for community contributions with secure authentication and dynamic state management.
+                    </p>
+                    
+                    <!-- Scrollable App Screenshots -->
+                    <div class="flex overflow-x-auto gap-3 mb-6 pb-2 snap-x hide-scrollbar">
+                        <img src="msahmon (1).jpeg" alt="Msahmon Dashboard" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="msahmon (2).jpeg" alt="Msahmon Opportunities" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="msahmon (3).jpeg" alt="Msahmon Opportunity Details" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="msahmon (4).jpeg" alt="Msahmon Profile Menu" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="msahmon (5).jpeg" alt="Msahmon Rewards" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <a href="https://play.google.com/store/apps/details?id=sa.msahmon.app" target="_blank" class="store-btn play-store">
+                        <i data-lucide="play"></i> Google Play
+                    </a>
+                    <a href="https://apps.apple.com/us/app/msahmon-%D9%85%D8%B3%D8%A7%D9%87%D9%85%D9%88%D9%86/id6758916488" target="_blank" class="store-btn app-store">
+                        <i data-lucide="apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-blue-500/20 rounded-lg">
+                        <i data-lucide="cpu" class="text-blue-500"></i>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Enterprise Solutions</span>
+                </div>
+                
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold mb-3">Azure (أزوري)</h3>
+                    <p class="text-slate-400 mb-5">
+                        Business efficiency tool for Odoo ecosystems using high-performance API handling with Dio.
+                    </p>
+                    
+                    <!-- Scrollable App Screenshots -->
+                    <div class="flex overflow-x-auto gap-3 mb-6 pb-2 snap-x hide-scrollbar">
+                        <img src="azure (1).jpeg" alt="Azure Services" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="azure (2).jpeg" alt="Azure Home Dashboard" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="azure (3).jpeg" alt="Azure Complaints Tracking" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="azure (4).jpeg" alt="Azure Profile Settings" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                        <img src="azure (5).jpeg" alt="Azure Swimming Pool Booking" class="h-48 sm:h-56 w-auto flex-shrink-0 rounded-xl object-cover snap-center border border-white/10 shadow-md">
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <a href="https://play.google.com/store/apps/details?id=com.odoo.azure" target="_blank" class="store-btn play-store">
+                        <i data-lucide="play"></i> Google Play
+                    </a>
+                    <a href="https://apps.apple.com/us/app/azure-%D8%A3%D8%B2%D9%88%D8%B1%D9%8I/id6754209699" target="_blank" class="store-btn app-store">
+                        <i data-lucide="apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-purple-500/20 rounded-lg">
+                        <i data-lucide="search" class="text-purple-500"></i>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">Recruitment</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Asian Al-Shark (اسيان الشرق)</h3>
+                <p class="text-slate-400 mb-8 flex-grow">
+                    Comprehensive recruitment platform managing complex form states and responsive UI.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.asian.recruitment" target="_blank" class="store-btn play-store">
+                        <i data-lucide="play"></i> Google Play
+                    </a>
+                    <a href="https://apps.apple.com/us/app/asian-al-shark-%D8%A7%D8%B3%D9%8I%D8%A7%D9%86-%D8%A7%D9%84%D8%B4%D8%B1%D9%82/id6755110477" target="_blank" class="store-btn app-store">
+                        <i data-lucide="apple"></i> App Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl flex flex-col h-full">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-3 bg-pink-500/20 rounded-lg">
+                        <i data-lucide="sparkles" class="text-pink-500"></i>
+                    </div>
+                    <span class="text-xs font-mono text-slate-500">AI & Lifestyle</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3">Blushing</h3>
+                <p class="text-slate-400 mb-8 flex-grow">
+                    An innovative lifestyle application developed by Chilax AI Innovations, featuring high-performance UI components.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.chilax_ai_innovations.blushing&hl=en_IN" target="_blank" class="store-btn play-store">
+                        <i data-lucide="play"></i> Google Play
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Technical Arsenal</h2>
+                    <p class="text-slate-400 mb-8">
+                        My expertise lies in the Flutter ecosystem, leveraging Dart to create 
+                        high-performance applications.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-1 text-sky-500 bg-sky-500"></div>
+                            <span class="font-bold">Flutter & Dart (Expert)</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-400">
+                            <div class="w-12 h-1 bg-slate-700"></div>
+                            <span>Odoo API Integration</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-400">
+                            <div class="w-12 h-1 bg-slate-700"></div>
+                            <span>REST APIs & Dio</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-400">
+                            <div class="w-12 h-1 bg-slate-700"></div>
+                            <span>Firebase & PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-sky-400 mb-2">6+</div>
+                        <div class="text-xs uppercase tracking-widest text-slate-500">Live Apps</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-sky-400 mb-2">100%</div>
+                        <div class="text-xs uppercase tracking-widest text-slate-500">Dart Native</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-sky-400 mb-2">iOS</div>
+                        <div class="text-xs uppercase tracking-widest text-slate-500">Store Expert</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-sky-400 mb-2">Android</div>
+                        <div class="text-xs uppercase tracking-widest text-slate-500">Store Expert</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to build something great?</h2>
+        <p class="text-slate-400 mb-10">
+            I am available for freelance projects or full-time opportunities.
+        </p>
+        <div class="flex flex-col md:flex-row gap-8 justify-center items-center flex-wrap">
+            <a href="mailto:chachushazin516@gmail.com" class="flex items-center gap-3 text-lg font-semibold hover:text-sky-400 transition">
+                <i data-lucide="mail" class="w-6 h-6"></i> chachushazin516@gmail.com
+            </a>
+            <div class="hidden md:block w-px h-6 bg-slate-700"></div>
+            <a href="tel:+918606230248" class="flex items-center gap-3 text-lg font-semibold hover:text-sky-400 transition">
+                <i data-lucide="phone" class="w-6 h-6"></i> +91 86062 30248
+            </a>
+            <div class="hidden md:block w-px h-6 bg-slate-700"></div>
+            <div class="flex gap-6">
+                <a href="https://github.com/Shazin12" target="_blank" class="p-3 bg-white/5 rounded-full hover:bg-white/10 transition">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="#" class="p-3 bg-white/5 rounded-full hover:bg-white/10 transition">
+                    <i data-lucide="linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-600 text-sm border-t border-white/5">
+        &copy; 2024 Flutter Developer Portfolio. Built with Tailwind CSS.
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
